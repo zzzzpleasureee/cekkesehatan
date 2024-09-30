@@ -13,7 +13,7 @@ class DoctorController extends Controller
     public function index()
     {
         $doctor = Doctor::all();
-        return view('pages.doctor.index', compact('doctor'));
+        return view('pages.patient.index', compact('doctor'));
     }
 
     /**

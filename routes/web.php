@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\MedicalRecordController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,9 @@ Route::group([
     // Routing CRUD: Doctor
     Route::resource('/doctor', App\Http\Controllers\DoctorController::class);
     Route::resource('/patient', App\Http\Controllers\PatientController::class)->only(['index', 'show', 'destroy']);
+
+    //Routing CRUD: MedicalRecord
+    Route::resource('/medical-record', App\Http\Controllers\MedicalRecordController::class);
     
 });
 
