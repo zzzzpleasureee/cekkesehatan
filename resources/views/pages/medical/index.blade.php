@@ -5,7 +5,7 @@
     <div class="page-title mb-3">
         <h3>
             <span class="bi bi-building"></span>
-            Patient
+            Medical
         </h3>
     </div>
 
@@ -16,30 +16,24 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Patient</th>
-                            <th>Jenis Kelamin</th>
-                            <th>Tempat Lahir</th>
+                            <th>No RM</th>
+                            <th>Tanggal Periksa</th>
+                            <th>Keluhan</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($patient as $item)
+                        @foreach ($medical as $item)
                             <tr>
-                                <td>{{ $item->nama_patient}}</td>
-                                <td>{{ $item->jenis_kelamin}}</td>
-                                <td>{{ $item->tempat_lahir}}</td>
-                                <td>
-                                    @if($item->jenis_kelamin == "L")
-                                      <span>Laki-Laki</span>
-                                      @else
-                                      <span>Perempuan</span>
-                                      @endif
-                                  </td>
+                                <td>{{ $item->no_RM}}</td>
+                                <td>{{ $item->tanggal_periksa}}</td>
+                                <td>{{ $item->keluhan}}</td>
+                                
                                     <td>
-                                        <a href="{{ route('admin.patient.show', $item->id) }}" class="btn btn-outline-secondary btn-sn">
+                                        <a href="{{ route('admin.medical.show', $item->id) }}" class="btn btn-outline-secondary btn-sn">
                                         <span class="bi bi-eye">Show</span>
                                         </a>
-                                        <a href="#" class="btn btn-danger btn-sm me-1" onclick="handleDestory(`{{ route('admin.patient.destroy', $item->id) }}`)">
+                                        <a href="#" class="btn btn-danger btn-sm me-1" onclick="handleDestory(`{{ route('admin.medical.destroy', $item->id) }}`)">
                                         <span class="bi bi-trash">Hapus</span>
                                         </a>
                                     </td>

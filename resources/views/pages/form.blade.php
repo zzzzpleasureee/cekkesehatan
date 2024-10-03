@@ -18,6 +18,7 @@
 
 </head>
 <body>
+
     <div class="container my-4">
         <div class="row justify-content-center">
             <div class="col-md-9">
@@ -39,10 +40,10 @@
                             @csrf
 
                             <div class="form group mb-3">
-                                <label for="name_patient">Nama Pasien</label>
-                                <input type="text" name="name_patient" id="name_patient" value="{{ old('name_patient') }}" class="form-control @error('name_patient') is-invalid @enderror">
+                                <label for="name">Nama Pasien</label>
+                                <input type="text" name="name" id="name" value="{{ old('name') }}" class="form-control @error('name') is-invalid @enderror">
                         
-                                @error('name_docter')
+                                @error('name')
                                     <div class="invalid-feedback d-block">
                                         {{ $message }}
                                     </div>
@@ -59,16 +60,18 @@
                                      <input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control"></input>
                              </div>
 
+                             <div class="form-group mb-2">
+                                <label for="tanggal_lahir" class="form-label">Jenis Kelamin<span class="text-danger">*</span></label>
                              <div class="form-check">
                                 <input type="radio" name="jenis_kelamin" id="L" value="L" class="form-check-input"></input>
                                 <label for="L" class="form-check-label">Laki-Laki</label>
-                        
                             </div>
                         
                             <div class="form-check">
                                 <input type="radio" name="jenis_kelamin" id="P" value="P" class="form-check-input"></input>
                                 <label for="P" class="form-check-label">Perempuan</label>
                             </div>
+                             </div>
 
                              <div class="form-group mb-2">
                                 <label for="alamat" class="from-label">Alamat</label>
@@ -84,10 +87,10 @@
                             </div>
 
                             <div class="form group mb-3">
-                                <label for="phonenumber">Nomor HP</label>
-                                <input type="text" name="phonenumber" id="phonenumber" value="{{ old('phonenumber') }}" class="form-control @error('phonenumber') is-invalid @enderror">
+                                <label for="no_hp">Nomor HP</label>
+                                <input type="number" name="no_hp" id="no_hp" value="{{ old('no_hp') }}" class="form-control @error('no_hp') is-invalid @enderror">
                         
-                                @error('phonenumber')
+                                @error('no_hp')
                                     <div class="invalid-feedback d-block">
                                         {{ $message }}
                                     </div>
@@ -97,17 +100,17 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group mb-3">
-                                        <label for="doctor_id">Doctor</label>
-                                        <select name="doctor_id" class="form-select @error ('doctor_id') is-invalid @enderror" >
+                                        <label for="dokter">Doctor</label>
+                                        <select name="dokter" class="form-select @error ('dokter') is-invalid @enderror" >
                         
                                             @foreach($doctor as $item)
-                                                <option value="{{ $item->id }}" @if(old('doctor_id') == $item->id) selected @endif>
+                                                <option value="{{ $item->id }}" @if(old('dokter') == $item->id) selected @endif>
                                                     {{ $item->name }}
                                                 </option>
                                             @endforeach
                                         </select>
                         
-                                        @error('doctor_id')
+                                        @error('dokter')
                                             <div class="invalid-feedback d-block">
                                                 {{ $message }}
                                             </div>                   
@@ -116,19 +119,19 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="form group mb-3">
-                                    <label for="blood_type">Golongan Darah</label>
-                                    <input type="text" name="blood_type" id="blood_type" value="{{ old('blood_type') }}" class="form-control @error('blood_type') is-invalid @enderror"/>
+                                    <label for="golongan_darah">Golongan Darah</label>
+                                    <input type="text" name="golongan_darah" id="golongan_darah" value="{{ old('golongan_darah') }}" class="form-control @error('golongan_darah') is-invalid @enderror"/>
                         
-                                    @error('blood_type')
+                                    @error('golongan_darah')
                                         <div class="invalid-feedback d-block">
                                             {{ $message }}
                                         </div>
                                     @enderror
                                 </div>
 
-                            <button type="submit" class="btn btn-primary">
-                                Submit <span class="bi bi-send"></span>
-                            </button>
+                                <button type="submit" class="btn btn-primary">
+                                     Simpan <i class="bi bi-upload"></i>
+                                </button>
                         </form>
                     </div>
                 </div>

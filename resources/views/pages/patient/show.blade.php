@@ -25,31 +25,31 @@
             </tr>
             <tr>
                 <td>Jenis Kelamin</td>
-                <td>{{$patient->from}}</td>
+                <td>{{$patient->jenis_kelamin}}</td>
             </tr>
             <tr>
                 <td>Tanggal Lahir </td>
-                <td>{{$patient->phone_number}}</td>
+                <td>{{$patient->tanggal_lahir}}</td>
             </tr>
             <tr>
                 <td>Tempat Lahir</td>
-                <td>{{$patient->email}}</td>
+                <td>{{$patient->tempat_lahir}}</td>
             </tr>
             <tr>
                 <td>Alamat</td>
-                <td>{{$patient->note}}</td>
+                <td>{{$patient->alamat}}</td>
             </tr>
             <tr>
                 <td>No Kartu BPJS</td>
-                <td>{{$patient->note}}</td>
+                <td>{{$patient->no_kartu_bpjs}}</td>
             </tr>
             <tr>
                 <td>No HP</td>
-                <td>{{$patient->note}}</td>
+                <td>{{$patient->phone_number}}</td>
             </tr>
             <tr>
                 <td>Dokter</td>
-                <td>{{$patient->note}}</td>
+                <td>{{$patient->nama}}</td>
             </tr>
             <tr>
                 <td>Golongan Darah</td>
@@ -70,7 +70,7 @@
         </div>
      </section>
      <td>
-    <a href="{{route('admin.patient.index')}}"class="btn btn-sm btn-secondary mb-2">Kembali</a>
+    <a href="{{ route('admin.patient.index')}}"class="btn btn-sm btn-secondary mb-2">Kembali</a>
      </td>
     </div>
 @endsection
