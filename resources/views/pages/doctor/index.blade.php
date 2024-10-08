@@ -25,7 +25,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($doctor as $item)
+                            @foreach ($doctors as $item)
                                 <tr>
                                     <td>{{ $item->name }}</td>
                                     <td>

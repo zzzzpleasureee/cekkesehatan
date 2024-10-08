@@ -4,7 +4,7 @@ use App\Http\Controllers\MedicalRecordController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [FormController::class, 'index']);
+Route::get('/', [FormController::class, 'index'])->name('form.index');
 Route::post('/', [FormController::class, 'store'])->name('form.store');
 
 

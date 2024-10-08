@@ -8,17 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Patient extends Model
 {
     use HasFactory;
-    protected $table = 'patient';
+    protected $table = 'patients';
     protected $fillable = [
         'name',
-        'jenis_kelamin',
-        'tanggal_lahir',
         'tempat_lahir',
+        'tanggal_lahir',
+        'jenis_kelamin',
         'alamat',
         'no_kartu_bpjs',
         'no_hp',
         'dokter',
-        'golongan darah'
+        'golongan_darah'
     ];
 
     public function doctor()

@@ -1,10 +1,12 @@
 <?php
 
 namespace Database\Seeders;
+
 use App\Models\Doctor;
+use App\Models\Patient;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use PhpParser\Comment\Doc;
 
 class DocterSeeder extends Seeder
 {
@@ -13,11 +15,10 @@ class DocterSeeder extends Seeder
      */
     public function run(): void
     {
-        Doctor::create(['name' => 'dr. Umum']);
-        Doctor::create(['name' => 'dr. Gigi']);
-        Doctor::create(['name' => 'dr. THT']);
-        Doctor::create(['name' => 'dr. Kulit']);
-
-        Doctor::factory(1000)->create();
+        Doctor::create(['name' => 'DR. Spesialis Mata']);
+        Doctor::create(['name' => 'DR. Spesialis Kulit']);
+        Doctor::create(['name' => 'DR. THT']);
+        Doctor::create(['name' => 'DR. Bedah']);
+        Doctor::factory(100)->create();
     }
 }

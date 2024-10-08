@@ -49,34 +49,59 @@
                                     </div>
                                 @enderror
                             </div>
-                        
-                                <div class="form-group mb-2">
-                                    <label for="tempat_lahir" class="from-label">Tempat Lahir</label>
-                                    <textarea name="tempat_lahir" id="tempat_lahir" class="form-control"></textarea>
-                                 </div>
 
-                             <div class="form-group mb-2">
-                                <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
-                                     <input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control"></input>
+                            <div class="form-group mb-2">
+                                <label for="tempat_lahir" class="from-label">Tempat Lahir</label>
+                                <textarea name="tempat_lahir" id="tempat_lahir" class="form-control"></textarea>
+
+                                @error('tempat_lahir')
+                                    <div class="invalid-feedback d-block">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                              </div>
 
-                             <div class="form-group mb-2">
-                                <label for="tanggal_lahir" class="form-label">Jenis Kelamin<span class="text-danger">*</span></label>
-                             <div class="form-check">
-                                <input type="radio" name="jenis_kelamin" id="L" value="L" class="form-check-input"></input>
-                                <label for="L" class="form-check-label">Laki-Laki</label>
-                            </div>
-                        
-                            <div class="form-check">
-                                <input type="radio" name="jenis_kelamin" id="P" value="P" class="form-check-input"></input>
-                                <label for="P" class="form-check-label">Perempuan</label>
-                            </div>
+                            <div class="form-group mb-2">
+                                <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
+                                     <input type="date" name="tanggal_lahir" id="tanggal_lahir" class="form-control">
+
+                                     @error('tanggal_lahir')
+                                     <div class="invalid-feedback d-block">
+                                         {{ $message }}
+                                     </div>
+                                 @enderror 
+                             </div>
+
+                            <div class="form-group mb-2">
+                                <label for="jenis_kelamin" class="form-label">Jenis Kelamin<span class="text-danger">*</span></label>
+                                <div class="form-check">
+                                    <input type="radio" name="jenis_kelamin" id="L" value="L" class="form-check-input">
+                                    <label for="L" class="form-check-label">Laki-Laki</label>
+                                </div>
+                            
+                                <div class="form-check">
+                                    <input type="radio" name="jenis_kelamin" id="P" value="P" class="form-check-input">
+                                    <label for="P" class="form-check-label">Perempuan</label>
+                                </div>
+
+                                @error('jenis_kelamin')
+                                    <div class="invalid-feedback d-block">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                              </div>
 
                              <div class="form-group mb-2">
                                 <label for="alamat" class="from-label">Alamat</label>
                                 <textarea name="alamat" id="alamat" class="form-control"></textarea>
+
+                                @error('alamat')
+                                    <div class="invalid-feedback d-block">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                              </div>
+
                              <div class="form-group mb-2">
                                 <label for="no_kartu_bpjs" class="from-label">No Kartu BPJS<span class="text-danger">*</span></label>
                                 <input type="number" name="no_kartu_bpjs" id="no_kartu_bpjs" value="{{ old('no_kartu_bpjs')}}" class="form-control @error('no_kartu_bpjs') is-invalid @enderror"></input>
@@ -88,7 +113,7 @@
 
                             <div class="form group mb-3">
                                 <label for="no_hp">Nomor HP</label>
-                                <input type="number" name="no_hp" id="no_hp" value="{{ old('no_hp') }}" class="form-control @error('no_hp') is-invalid @enderror">
+                                <input type="text" name="no_hp" id="no_hp" value="{{ old('no_hp') }}" class="form-control @error('no_hp') is-invalid @enderror">
                         
                                 @error('no_hp')
                                     <div class="invalid-feedback d-block">
@@ -103,7 +128,7 @@
                                         <label for="dokter">Doctor</label>
                                         <select name="dokter" class="form-select @error ('dokter') is-invalid @enderror" >
                         
-                                            @foreach($doctor as $item)
+                                            @foreach($doctors as $item)
                                                 <option value="{{ $item->id }}" @if(old('dokter') == $item->id) selected @endif>
                                                     {{ $item->name }}
                                                 </option>
@@ -130,7 +155,7 @@
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">
-                                     Simpan <i class="bi bi-upload"></i>
+                                     Simpan <span class="bi bi-send"></span>
                                 </button>
                         </form>
                     </div>

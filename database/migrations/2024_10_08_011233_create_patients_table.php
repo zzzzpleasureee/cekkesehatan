@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->enum('jenis_kelamin', ['L', 'P'])->default('L');
+            $table->string('name', );
+            $table->string('tempat_lahir')->nullable();
             $table->date('tanggal_lahir')->nullable();
-            $table->string('tempat_lahir', 64)->nullable();
-            $table->text('alamat')->nullable();
-            $table->string('no_kartu_bpjs', 64)->nullable();
-            $table->string('no_hp', 16)->nullable();
-            $table->string('dokter', 64)->nullable();
-            $table->string('golongan_darah', 5)->nullable();
+            $table->enum('jenis_kelamin',['L','P'])->default('L');
+            $table->text('alamat')->nullable()->nullable();
+            $table->string('no_kartu_bpjs')->nullable();
+            $table->string('no_hp')->nullable();
+            $table->string('dokter')->nullable();
+            $table->string('golongan_darah')->nullable();
             $table->timestamps();
         });
     }

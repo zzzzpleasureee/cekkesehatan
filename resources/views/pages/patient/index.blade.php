@@ -16,25 +16,18 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Patient</th>
-                            <th>Jenis Kelamin</th>
+                            <th>Nama Pasien</th>
                             <th>Tempat Lahir</th>
+                            <th>Tanggal Lahir</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($patient as $item)
+                        @foreach ($patients as $item)
                             <tr>
-                                <td>{{ $item->nama_patient}}</td>
-                                <td>{{ $item->jenis_kelamin}}</td>
-                                <td>{{ $item->tempat_lahir}}</td>
-                                <td>
-                                    @if($item->jenis_kelamin == "L")
-                                      <span>Laki-Laki</span>
-                                      @else
-                                      <span>Perempuan</span>
-                                      @endif
-                                  </td>
+                                <td>{{ $item->Nama_Pasien}}</td>
+                                <td>{{ $item->Tempat_Lahir}}</td>
+                                <td>{{ $item->tanggal_lahir}}</td>
                                     <td>
                                         <a href="{{ route('admin.patient.show', $item->id) }}" class="btn btn-outline-secondary btn-sn">
                                         <span class="bi bi-eye">Show</span>

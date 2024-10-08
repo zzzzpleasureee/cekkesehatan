@@ -11,8 +11,8 @@ class PatientController extends Controller
 {
     public function index() 
     {
-        $patient = Patient::orderBy('created_at', 'DESC')->get();
-        return view('pages.patient.index', compact('patient'));
+        $patients = Patient::orderBy('created_at', 'DESC')->get();
+        return view('pages.patient.index', compact('patients'));
     }
 
     public function show(Request $id)
@@ -23,7 +23,7 @@ class PatientController extends Controller
 
     public function create()
     {
-        $doctor = Doctor::all();
+        $doctors = Doctor::all();
         return view('pages.patient.create');
     }
 
@@ -31,13 +31,12 @@ class PatientController extends Controller
     {
         $request->validate([
             'name' => 'required|max:128',
-            'doctor' => 'required',
+            'tempat_lahir'=>'required',
+            'tanggal_lahir' => 'required',
             'jenis_kelamin' => 'required',
-            'alamat' => 'required|min:3|max:225',
-            'tanggal_lahir' => 'required|max:64',
-            'tempat_lahir' => 'required|max:64',
+            'alamat' => 'required|max:225',
             'no_kartu_bpjs' => 'required|max:16',
-            'phonenumber' => 'required|min:10|max:16',
+            'no_hp' => 'required|min:10|max:16',
             'dokter' => 'required',
             'golongan darah' => 'required'
         ],
@@ -46,9 +45,8 @@ class PatientController extends Controller
             'name.max' => 'Nama harus diisi maksimal 128 karakter',
 
         ]
-    );
-
-        $patient = Patient::create($request->all());
+        );
+        $patients = Patient::create($request->all());
         // return redirect()->route('form.index')->with('success', 'Data Pasien Berhasil.');
     }
 
@@ -56,7 +54,7 @@ class PatientController extends Controller
     {
         $patients = Patient::find($id);
         $patients->delete();
-        return redirect('admin.patient');
+        return redirect('admin/patient');
     }
 
 }

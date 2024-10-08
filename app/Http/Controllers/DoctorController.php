@@ -12,8 +12,8 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $doctor = Doctor::all();
-        return view('pages.doctor.index', compact('doctor'));
+        $doctors = Doctor::all();
+        return view('pages.doctor.index', compact('doctors'));
     }
 
     /**
@@ -43,7 +43,7 @@ class DoctorController extends Controller
     public function show(string $id)
     {
         $doctor = Doctor::find($id);  // SELECT * FROM doctor WHERE id = $id
-        return view('pages.doctor.show',compact('doctor'));
+        return view('pages.doctor.show', compact('doctor'));
     }
 
     /**
