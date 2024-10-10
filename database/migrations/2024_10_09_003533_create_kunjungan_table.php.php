@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('patients', function (Blueprint $table) {
+        Schema::create('kunjungan', function (Blueprint $table) {
             $table->id();
-            $table->string('name', );
-            $table->string('tempat_lahir')->nullable();
-            $table->date('tanggal_lahir')->nullable();
+            $table->date('tanggal')->nullable();
+            $table->string('no_pasien')->nullable();
+            $table->string('nama_pasien')->nullable();
             $table->enum('jenis_kelamin',['L','P'])->default('L');
-            $table->text('alamat')->nullable()->nullable();
-            $table->string('no_kartu_bpjs')->nullable();
-            $table->string('no_hp')->nullable();
+            $table->string('umur')->nullable();
+            $table->text('rekam_medis')->nullable();
+            $table->string('treatment')->nullable();
+            $table->string('rujukan')->nullable();
             $table->string('dokter')->nullable();
-            $table->string('golongan_darah')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('patients');
+        Schema::dropIfExists('kunjungan');
     }
 };

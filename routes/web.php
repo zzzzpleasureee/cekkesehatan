@@ -34,7 +34,11 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('in
     Route::resource('/doctor', App\Http\Controllers\DoctorController::class);
     Route::resource('patient', App\Http\Controllers\PatientController::class); 
 
-    // Routing CRUD: Medical
-    Route::resource('/medical', App\Http\Controllers\MedicalController::class)->only(['index', 'show', 'destroy']);
+    // Routing CRUD: Kunjungan
+    Route::resource('/kunjungan', App\Http\Controllers\KunjunganController::class);
+
+    // Routing CRUD: Treatment
+    Route::resource('/treatment', App\Http\Controllers\TreatmentController::class);
+
     
 });

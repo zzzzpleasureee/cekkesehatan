@@ -12,9 +12,8 @@
             <table class ="table table-striped table-bordered">
             
             <tr>
-                <td>Nama</td>
-                <td>{{$doctors->name}}</td>
+                <td>Dokter</td>
+                <td>{{$doctor->name}}</td>
             </tr>
-            
     </div>
 @endsection

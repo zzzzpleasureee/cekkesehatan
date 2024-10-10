@@ -20,7 +20,7 @@ class Doctor extends Model
         parent::boot();
 
         static::deleting(function($model) {
-            Patient::where('doctor', $model->id)->delete();
+            Patient::where('doctors', $model->id)->delete();
         });
     }
 

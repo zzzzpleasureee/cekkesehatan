@@ -78,6 +78,6 @@ class DoctorController extends Controller
     {
         $doctor = Doctor::find($id);
         $doctor->delete();
-        return redirect()->route('admin.doctor.index');
+        return redirect()->route('admin/doctor');
     }
 }

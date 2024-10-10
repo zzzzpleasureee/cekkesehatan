@@ -11,11 +11,11 @@ class PatientController extends Controller
 {
     public function index() 
     {
-        $patients = Patient::orderBy('created_at', 'DESC')->get();
+        $patients = Patient::all();
         return view('pages.patient.index', compact('patients'));
     }
 
-    public function show(Request $id)
+    public function show($id)
     {
         $patients = Patient::find($id);
         return view('pages.patient.show', compact('patients'));
@@ -54,7 +54,7 @@ class PatientController extends Controller
     {
         $patients = Patient::find($id);
         $patients->delete();
-        return redirect('admin/patient');
+        return redirect('admin.patients');
     }
 
 }

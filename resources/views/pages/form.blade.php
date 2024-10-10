@@ -157,6 +157,11 @@
                                 <button type="submit" class="btn btn-primary">
                                      Simpan <span class="bi bi-send"></span>
                                 </button>
+
+                                <button type="submit" class="btn btn-primary">
+                                    Berikutnya <span class="bi bi-send"></span>
+                                    <i class="bi bi-chevron-double-right"></i>
+                               </button>
                         </form>
                     </div>
                 </div>

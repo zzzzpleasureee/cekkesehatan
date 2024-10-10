@@ -15,10 +15,11 @@ class DocterSeeder extends Seeder
      */
     public function run(): void
     {
-        Doctor::create(['name' => 'DR. Spesialis Mata']);
-        Doctor::create(['name' => 'DR. Spesialis Kulit']);
-        Doctor::create(['name' => 'DR. THT']);
-        Doctor::create(['name' => 'DR. Bedah']);
+        Doctor::create(['DR. Spesialis Mata']);
+        Doctor::create(['DR. Spesialis Kulit']);
+        Doctor::create(['DR. THT']);
+        Doctor::create(['DR. Bedah']);
+        Doctor::create(['DR. Umum']);
         Doctor::factory(100)->create();
     }
 }

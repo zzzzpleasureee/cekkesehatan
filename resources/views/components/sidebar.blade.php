@@ -31,14 +31,21 @@
                 <li class="sidebar-item  ">
                     <a href="{{ route('admin.patient.index') }}" class='sidebar-link'>
                         <i class="bi bi-people"></i>
-                        <span>Pasien</span>
+                        <span>Pasien Daftar Online</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item  ">
-                    <a href="{{ route('admin.medical.index') }}" class='sidebar-link'>
-                        <i class="bi bi-people"></i>
-                        <span>Medical</span>
+                    <a href="{{ route('admin.kunjungan.index') }}" class='sidebar-link'>
+                        <i class="bi bi-door-open"></i>
+                        <span>Kunjungan Pasien</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  ">
+                    <a href="{{ route('admin.treatment.index') }}" class='sidebar-link'>
+                        <i class="bi bi-clipboard-data"></i>
+                        <span>Data Treatment</span>
                     </a>
                 </li>
 

@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('medical', function (Blueprint $table) {
+        Schema::create('treatment', function (Blueprint $table) {
             $table->id();
-            $table->string('no_rm')->unique();
-            $table->date('tanggal_periksa');
-            $table->text('keluhan');
-            $table->text('lab', 100)->nullable();
-            $table->text('diagnosis');
-            $table->text('terapi');
+            $table->date('tanggal')->nullable();
+            $table->string('nama_pasien')->nullable();
+            $table->string('berat_badan')->nullable();
+            $table->string('tinggi_badan')->nullable();
+            $table->string('tekanan_darah')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('medical');
+        Schema::dropIfExists('treatment');
     }
 };

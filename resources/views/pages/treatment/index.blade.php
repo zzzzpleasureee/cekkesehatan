@@ -5,11 +5,11 @@
         <div class="page-title mb-3">
             <h3>
                 <span class="bi bi-building"></span>
-                Doctor
+                Data Treatment
             </h3>
         </div>
 
-        <a href="{{ route('admin.doctor.create') }}" class="btn btn-primary mb-3">
+        <a href="{{ route('admin.treatment.create') }}" class="btn btn-primary mb-3">
             <span class="bi bi-plus-circle"></span>
             Create New
         </a>
@@ -20,27 +20,36 @@
                     <table id="datatable" class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Dokter</th>
+                                <th>Tanggal</th>
+                                <th>Nama Pasien</th> 
+                                <th>Berat Badan</th>
+                                <th>Tinggi Badan</th> 
+                                <th>Tekanan Darah</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($doctors as $item)
+                            @foreach ($treatment as $item)
                                 <tr>
-                                    <td>{{ $item->name }}</td>
+                                    <td>{{ $item->tanggal }}</td>
+                                    <td>{{ $item->nama_pasien }}</td>
+                                    <td>{{ $item->berat_badan }}</td>
+                                    <td>{{ $item->tinggi_badan }}</td>  
+                                    <td>{{ $item->tekanan_darah }}</td>
+
                                     <td>
-                                        <a href="{{ route('admin.doctor.show', $item->id) }}"
+                                        <a href="{{ route('admin.treatment.show', $item->id) }}"
                                             class="btn btn-outline-secondary btn-sn">
                                             <span class="bi bi-eye">Show</span>
-                                        </a>
-                                        <a href="{{ route('admin.doctor.edit', $item->id) }}"
+                                        </a> 
+                                        <a href="{{ route('admin.treatment.edit', $item->id) }}"
                                             class="btn btn-secondary btn-sn">
                                             <span class="bi bi-pencil">Edit</span>
                                         </a>
                                         <a href="#" class="btn btn-danger btn-sm me-1"
-                                            onclick="handleDestory(`{{ route('admin.doctor.destroy', $item->id) }}`)">
+                                            onclick="handleDestory(`{{ route('admin.treatment.destroy', $item->id) }}`)">
                                             <span class="bi bi-trash">Hapus</span>
-                                        </a>
+                                        </a> 
                                     </td>
                                 </tr>
                             @endforeach

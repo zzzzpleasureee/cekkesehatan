@@ -4,8 +4,8 @@
 <div class="page-heading">
     <div class="page-title mb-3">
         <h3>
-            <span class="bi bi-building"></span>
-            Patient
+            <span class="bi bi-people"></span>
+            Pasient Daftar Online
         </h3>
     </div>
 
@@ -25,8 +25,9 @@
                     <tbody>
                         @foreach ($patients as $item)
                             <tr>
-                                <td>{{ $item->Nama_Pasien}}</td>
-                                <td>{{ $item->Tempat_Lahir}}</td>
+                                <td>{{ $item->id}}</td>
+                                <td>{{ $item->name}}</td>
+                                <td>{{ $item->tempat_lahir}}</td>
                                 <td>{{ $item->tanggal_lahir}}</td>
                                     <td>
                                         <a href="{{ route('admin.patient.show', $item->id) }}" class="btn btn-outline-secondary btn-sn">

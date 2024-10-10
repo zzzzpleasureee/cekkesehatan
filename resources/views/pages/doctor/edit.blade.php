@@ -11,10 +11,9 @@
         @method('PUT')
 
         <div class="form-group mb-2">
-            <label for="name" class="from-label">Nama</label>
+            <label for="name" class="from-label">Dokter</label>
              <input type="text" name="name" id="name" value="{{ $doctor->name}}" class="form-control"></input>
          </div>
-
          <button type="submit" class="btn btn-primary">
             Simpan
         </button>
