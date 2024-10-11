@@ -39,6 +39,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('in
 
     // Routing CRUD: Treatment
     Route::resource('/treatment', App\Http\Controllers\TreatmentController::class);
-
+    
+    // Routing CRUD: Rujukan
+    Route::resource('/rujukan', App\Http\Controllers\RujukanController::class);
     
 });

@@ -55,8 +55,8 @@
          </div>
 
          <div class="form-group mb-2">
-            <label for="rekam_medis" class="from-label">Alamat</label>
-            <textarea name="rekam_medis" id="rekam_medis"  class="form-control"> {{ $kunjungan->rekam_medis}}</textarea>
+            <label for="alamat" class="from-label">Alamat</label>
+            <textarea name="alamat" id="alamat"  class="form-control"> {{ $kunjungan->alamat}}</textarea>
          </div>
 
          <div class="form-group mb-2">
