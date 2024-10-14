@@ -4,14 +4,14 @@
 <div class="page-heading"> 
     <div class="page-title mb-3">
         <h3>
-            <span class="bi bi-building"></span>
+            <span class="bi bi-door-open"></span>
             Kunjungan Pasien
         </h3>
     </div>
 
     <section class="section">
         <div class="card">
-            <div class="crad-body">
+            <div class="card-body">
                 <form action="{{ route('admin.kunjungan.store')}}" method="POST">
                     @csrf
                     <div class="form-group mb-2">

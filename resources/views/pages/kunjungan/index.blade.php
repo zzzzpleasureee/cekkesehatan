@@ -4,7 +4,7 @@
     <div class="page-heading">
         <div class="page-title mb-3">
             <h3>
-                <span class="bi bi-building"></span>
+                <span class="bi bi-door-open"></span>
                 Data Kunjungan 
             </h3>
         </div>

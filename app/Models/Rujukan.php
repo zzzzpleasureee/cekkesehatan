@@ -20,7 +20,7 @@ class Rujukan extends Model
     
     public function rujukan()
     {
-        $this->belongsTo(Rujukan::class);
+       return $this->belongsTo(Rujukan::class);
     }
 
 

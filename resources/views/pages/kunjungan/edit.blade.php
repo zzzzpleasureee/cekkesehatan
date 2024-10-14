@@ -55,11 +55,6 @@
          </div>
 
          <div class="form-group mb-2">
-            <label for="alamat" class="from-label">Alamat</label>
-            <textarea name="alamat" id="alamat"  class="form-control"> {{ $kunjungan->alamat}}</textarea>
-         </div>
-
-         <div class="form-group mb-2">
             <label for="treatment" class="from-label">Treatment</label>
                  <input type="text" name="treatment" id="treatment" value="{{ $kunjungan->treatment}}" class="form-control"></input>
          </div>

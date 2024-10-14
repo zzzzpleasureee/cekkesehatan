@@ -4,14 +4,14 @@
 <div class="page-heading"> 
     <div class="page-title mb-3">
         <h3>
-            <span class="bi bi-building"></span>
+            <span class="bi bi-briefcase"></span>
             Rujukan Pasien
         </h3>
     </div>
 
     <section class="section">
         <div class="card">
-            <div class="crad-body">
+            <div class="card-body">
                 <form action="{{ route('admin.rujukan.store')}}" method="POST">
                     @csrf
 
