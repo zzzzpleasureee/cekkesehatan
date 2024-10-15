@@ -16,9 +16,5 @@ class Treatment extends Model
         'tinggi_badan',
         'tekanan_darah',
     ];
-    public function treatment()
-    {
-        $this->belongsTo(treatment::class);
-    }
 
 }

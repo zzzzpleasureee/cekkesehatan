@@ -64,7 +64,7 @@ class RujukanController extends Controller
     {
         $rujukan = Rujukan::find($id);
         $rujukan->delete();
-        return redirect()->route('admin.rujukan');
+        return redirect()->route('admin.rujukan.index');
     }
 
 

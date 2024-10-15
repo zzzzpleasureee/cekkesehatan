@@ -64,7 +64,7 @@ class KunjunganController extends Controller
     {
         $kunjungan = Kunjungan::find($id);
         $kunjungan->delete();
-        return redirect()->route('admin.kunjungan');
+        return redirect()->route('admin.kunjungan.index');
     }
 
 

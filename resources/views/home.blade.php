@@ -2,22 +2,20 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Menu') }}</div>
-
+    <div class="page-title mb-3">
+            <h3>
+                <span class="bi bi-grid-fill"></span>
+                Menu Utama
+            </h3>
+    </div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
+                        <h4>
+                            {{ __('Selamat Datang Sebagai Admin') }}
+                        </h4>
 </div>
 @endsection

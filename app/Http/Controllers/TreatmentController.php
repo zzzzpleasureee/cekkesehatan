@@ -50,7 +50,7 @@ class TreatmentController extends Controller
     {
         $treatment = Treatment::find($id);
         $treatment->delete();
-        return redirect()->route('admin.treatment');
+        return redirect()->route('admin.treatment.index');
     }
 
 }

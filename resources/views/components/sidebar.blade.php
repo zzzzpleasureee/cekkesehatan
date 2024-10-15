@@ -24,7 +24,7 @@
                 <li class="sidebar-item  ">
                     <a href="{{ route('admin.doctor.index') }}" class='sidebar-link'>
                         <i class="bi bi-building"></i>
-                        <span>Doctor</span>
+                        <span>Dokter</span>
                     </a>
                 </li>
 
