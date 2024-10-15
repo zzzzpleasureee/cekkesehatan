@@ -152,14 +152,11 @@
                                     @enderror
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">
-                                     Simpan <span class="bi bi-send"></span>
-                                </button>
-
-                                <button type="submit" class="btn btn-primary">
-                                    Berikutnya <span class="bi bi-send"></span>
-                                    <i class="bi bi-chevron-double-right"></i>
-                               </button>
+                                <div class="d-grid gap-20 col-50 mx-auto">
+                                    <button type="submit" class="btn btn-primary">
+                                        Simpan <span class="bi bi-send"></span>
+                                    </button>
+                                  </div>
                         </form>
                     </div>
                 </div>
