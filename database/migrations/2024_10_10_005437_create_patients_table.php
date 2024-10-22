@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('alamat')->nullable();
             $table->string('no_kartu_bpjs')->nullable();
             $table->string('no_hp')->nullable();
-            $table->string('dokter')->nullable();
+            $table->string('doctors')->nullable();
             $table->string('golongan_darah')->nullable();
             $table->timestamps();
         });

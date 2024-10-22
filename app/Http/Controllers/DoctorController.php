@@ -33,7 +33,7 @@ class DoctorController extends Controller
             'name' => 'required',
         ]);
 
-        $doctor = Doctor::create($request->all());
+        $doctors = Doctor::create($request->all());
         return redirect()->route('admin.doctor.index');   // Return "Proses Simpan";
     }
 
@@ -42,8 +42,8 @@ class DoctorController extends Controller
      */
     public function show(string $id)
     {
-        $doctor = Doctor::find($id);  // SELECT * FROM doctor WHERE id = $id
-        return view('pages.doctor.show', compact('doctor'));
+        $doctors = Doctor::find($id);  // SELECT * FROM doctor WHERE id = $id
+        return view('pages.doctor.show', compact('doctors'));
     }
 
     /**
@@ -51,7 +51,7 @@ class DoctorController extends Controller
      */
     public function edit(string $id)
     {
-        $doctor = Doctor::find($id);
+        $doctors = Doctor::find($id);
         return view('pages.doctor.edit', compact('doctor'));
     }
 
@@ -66,8 +66,8 @@ class DoctorController extends Controller
             'name.required' => 'Name harus diisi.',
         ]);
 
-        $doctor = Doctor::find($id);
-        $doctor->update($request->all());
+        $doctors = Doctor::find($id);
+        $doctors->update($request->all());
         return redirect()->route('admin.doctor.index');
     }
 
@@ -76,8 +76,8 @@ class DoctorController extends Controller
      */
     public function destroy(string $id)
     {
-        $doctor = Doctor::find($id);
-        $doctor->delete();
+        $doctors = Doctor::find($id);
+        $doctors->delete();
         return redirect()->route('admin.doctor.index');
     }
 }

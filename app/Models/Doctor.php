@@ -15,16 +15,7 @@ class Doctor extends Model
         'name',
     ];
 
-    public static function boot()
-    {
-        parent::boot();
-
-        static::deleting(function($model) {
-            Patient::where('doctors', $model->id)->delete();
-        });
-    }
-
-    public function patients()
+    public function doctors()
     {
         return $this->hasMany(Patient::class);
     }

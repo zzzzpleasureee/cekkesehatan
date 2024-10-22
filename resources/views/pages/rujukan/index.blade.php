@@ -11,7 +11,7 @@
 
         <a href="{{ route('admin.rujukan.create') }}" class="btn btn-primary mb-3">
             <span class="bi bi-plus-circle"></span>
-            Create New
+           Tambah Data Rujukan
         </a>
 
         <section class="section">

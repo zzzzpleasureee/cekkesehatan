@@ -21,8 +21,5 @@ class Patient extends Model
         'golongan_darah'
     ];
 
-    public function doctor()
-    {
-        $this->belongsTo(Doctor::class);
-    }
+    
 }

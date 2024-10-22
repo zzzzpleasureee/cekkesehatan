@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\treatment;
+use App\Models\Treatment;
 use Illuminate\Http\Request;
 
 class TreatmentController extends Controller
@@ -44,6 +44,23 @@ class TreatmentController extends Controller
         );
         $treatment = Treatment::create($request->all());
         return redirect()->route('admin.treatment.index');   // Return "Proses Simpan";
+    }
+
+    public function edit($id)
+    {
+        $treatment = Treatment::find($id);
+        return view('pages.treatment.edit', compact('treatment'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'tanggal'=>'required|unique:treatment,tanggal,'.$id,
+        ]);
+
+        $treatment = Treatment::find($id);
+        $treatment->update($request->all());
+        return redirect()->route('admin.treatment.index');
     }
 
     public function destroy($id) 

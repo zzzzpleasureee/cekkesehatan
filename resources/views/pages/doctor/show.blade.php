@@ -13,7 +13,7 @@
             
             <tr>
                 <td>Dokter</td>
-                <td>{{$doctor->name}}</td>
+                <td>{{$doctors->name}}</td>
             </tr>
     </div>
 @endsection

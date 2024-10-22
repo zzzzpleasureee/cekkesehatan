@@ -57,7 +57,7 @@ class KunjunganController extends Controller
 
         $kunjungan = Kunjungan::find($id);
         $kunjungan->update($request->all());
-        return redirect()->route('kunjungan.index');
+        return redirect()->route('admin.kunjungan.index');
     }
 
     public function destroy($id)

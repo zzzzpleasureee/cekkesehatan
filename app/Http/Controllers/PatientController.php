@@ -54,7 +54,7 @@ class PatientController extends Controller
     {
         $patients = Patient::find($id);
         $patients->delete();
-        return redirect('admin.patients');
+        return redirect()->route('admin.patient.index');
     }
 
 }
