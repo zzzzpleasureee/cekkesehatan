@@ -17,5 +17,7 @@
                         <h4>
                             {{ __('Selamat Datang Sebagai Admin') }}
                         </h4>
+                        <img src="{{ asset('/images/gambar/cek.png') }}" class="img-fluid" alt="gambar">
 </div>
+
 @endsection
